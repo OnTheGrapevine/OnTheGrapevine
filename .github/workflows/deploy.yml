@@ -20,11 +20,12 @@ jobs:
 
       - name: Deploy to Nekoweb
         uses: mp-pinheiro/nekoweb-deploy@0.3.0
+        timeout-minutes: 15
         with:
           API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
-          BUILD_DIR: './public'
+          BUILD_DIR: './build'
           DEPLOY_DIR: '/'
           CLEANUP: 'True'
-          DELAY: '0.5'
+          DELAY: '0.05'
           NEKOWEB_PAGENAME: 'onthegrapevine'
           ENCRYPTION_KEY: ${{ secrets.NEKOWEB_ENCRYPTION_KEY }}
