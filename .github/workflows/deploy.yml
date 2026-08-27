@@ -1,31 +1,84 @@
+#name: Deploy to Nekoweb
+
+#on:
+#  push:
+ #   branches:
+ #     - main
+
+#jobs:
+ # deploy:
+ #   runs-on: ubuntu-latest
+
+   # steps:
+   #   - name: Checkout repository
+   #     uses: actions/checkout@v4
+
+   #   - name: Prepare build
+   #     run: |
+    #      mkdir -p ./build
+    #      cp -r ./public/* ./build
+
+  #    - name: Deploy to Nekoweb
+   #     uses: mp-pinheiro/nekoweb-deploy@0.3.0
+    #    timeout-minutes: 15
+    #    with:
+     #     API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
+     #     BUILD_DIR: './build'
+      #    DEPLOY_DIR: '/'
+        #  CLEANUP: 'True'
+        #  DELAY: '0.05'
+       #   NEKOWEB_PAGENAME: 'onthegrapevine'
+      #    ENCRYPTION_KEY: ${{ secrets.NEKOWEB_ENCRYPTION_KEY }}
+
 name: Deploy to Nekoweb
 
+# only run on changes to main. Use main or master depending on whatever your default branch is called.
 on:
   push:
     branches:
       - main
+
+#concurrency: # prevent concurrent deploys doing strange things
+ # group: deploy-to-neocities
+  #cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    # The checkout step copies your repo into the action runner. Important!
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    # Set up any tools and build steps here
+    # This example uses a Node.js toolchain to build a site
+    # If you don't need Node.js to build your site, you can omit this.
+    #- name: Use Node.js
+    #  uses: actions/setup-node@v4
+    #  with:
+    #    node-version: lts/*
+    # If you have a different build process, replace this with your own build steps
+    #- name: Install deps and build
+    #  run: |
+    #    npm i
+    #    npm run build
+    # When the dist_dir is ready, deploy it to neocities
+    # Here we deploy the folder named `public`
 
-      - name: Prepare build
-        run: |
-          mkdir -p ./build
-          cp -r ./public/* ./build
+   # - name: Prepare build
+   #     run: |
+   #       mkdir -p ./build
+     #     cp -r ./public/* ./build
 
-      - name: Deploy to Nekoweb
+    - name: Deploy to Nekoweb
         uses: mp-pinheiro/nekoweb-deploy@0.3.0
         timeout-minutes: 15
         with:
           API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
-          BUILD_DIR: './build'
-          DEPLOY_DIR: '/'
+    #      BUILD_DIR: './build'
+          DEPLOY_DIR: 'public'
           CLEANUP: 'True'
           DELAY: '0.05'
           NEKOWEB_PAGENAME: 'onthegrapevine'
           ENCRYPTION_KEY: ${{ secrets.NEKOWEB_ENCRYPTION_KEY }}
+
