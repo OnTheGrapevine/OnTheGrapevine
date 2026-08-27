@@ -1,6 +1,6 @@
             :root {
                 --header-image: url('');
-                --body-bg-image: url('/l.bg.jpeg');
+                --body-bg-image: url('https://cdn.jsdelivr.net/gh/OnTheGrapevine/OnTheGrapevine@main/CDN/graphics/l.bg.jpeg');
 
                 /* colors */
                 --content: #000000;
@@ -8,9 +8,9 @@
 
 @font-face {
     font-family: 'La Machine Company';
-    src: url('/LaMachineCompany.woff2') format('woff2'),
-        url('/LaMachineCompany.woff') format('woff'),
-        url('/LaMachineCompany.ttf') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/OnTheGrapevine/OnTheGrapevine@main/CDN/fonts/LaMachineCompany.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/OnTheGrapevine/OnTheGrapevine@main/CDN/fonts/LaMachineCompany.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/OnTheGrapevine/OnTheGrapevine@main/CDN/fonts/LaMachineCompany.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -90,7 +90,7 @@
                 width: 100%;
                 
                 background-color: #000000;
-                background-image: url('/l.swirlblack.jpg');
+                background-image: url('https://cdn.jsdelivr.net/gh/OnTheGrapevine/OnTheGrapevine@main/CDN/graphics/l.swirlblack.jpg');
                 background-attachment: scroll;
                 background-repeat: repeat;
                 background-size: 100px;
@@ -132,7 +132,7 @@
     create styles for #leftSidebar and #rightSidebar */
             aside {
                 background-color: #000000;
-                background-image: url('/l.asidebg.png');
+                background-image: url('https://cdn.jsdelivr.net/gh/OnTheGrapevine/OnTheGrapevine@main/CDN/graphics/l.asidebg.png');
                 background-attachment: scroll;
                 background-repeat: no-repeat;
                 background-size:contain;
@@ -149,7 +149,7 @@
     between the sidebars! */
             main {
                 background-color: #000000;
-                background-image: url('/l.swirlblack.jpg');
+                background-image: url('https://cdn.jsdelivr.net/gh/OnTheGrapevine/OnTheGrapevine@main/CDN/graphics/l.swirlblack.jpg');
                 background-attachment: scroll;
                 background-repeat: repeat;
                 background-size: 100px;
