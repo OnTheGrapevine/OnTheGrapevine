@@ -30,7 +30,7 @@
                       <li>Masterplug RCD Safety Adaptor
                       <li>iFixit digital multimeter
                       <li>TOLSEN 38048 wire stripper multitool (also wire cutter and crimper)
-                      <li>soldering kit: Antex TSC50W soldering iron, wip <!-- solder stand, sponge/steel wool? -->
+                      <li>soldering kit: Antex TSC50W soldering iron with a basic stand and sponge
                       <li>Leatherman skeletool (knife, pliers, wire cutters, driver and bottle opener)
                       <li>Tayg rolling toolbox
                       <li>Elna lotus tsp sewing machine
@@ -39,7 +39,7 @@
                   STOCK I KEEP:
                     <ul>
                       <li>sewing kit: black and white thread
-                      <li>soldering kit: flux, wip
+                      <li>soldering kit: lead/lead-free solder, flux/resin
                       <li>isopropyl alcohol IPA 99.9% (1L spray bottle)
                     </ul>
                     
@@ -51,21 +51,18 @@
                     <li>Mikayla
                     <li>Jonathan
                     <li>Cameron
+                    <li>Karl
                   </ul>
                   
                   REPAIR ENTRIES STATISTICS:<br>
-                  12 total<br>
+                  14 total<br>
                   <br>
                   6 successful<br>
-                  1 tbc<br>
-                  4 advice given<br>
+                  6 advice given<br>
                   2 e-waste<br>
                   <br>
-                  1 smart electronics<br>
-                  12 electronics<br>
-                  <br>
                   2 independent<br>
-                  6 supervised<br>
+                  8 supervised<br>
                   5 shadowing/assissting<br>
                   
   
@@ -80,15 +77,6 @@
             </label>
         </div>  
                       
-  SMART ELECTRONICS
-
-<div class="toggle-check check-laptop">
-            <label for="laptop">
-                <input type="checkbox" class="checkbox" id="laptop">1 laptop
-                <span class="checkmark"></span>
-            </label>
-        </div>
-  
   ELECTRONICS
                       
         <div class="toggle-check check-sewingmachine">
@@ -105,16 +93,37 @@
             </label>
         </div> 
         
-<div class="toggle-check check-lead">
-            <label for="lead">
-                <input type="checkbox" class="checkbox" id="lead">1 lead
-                <span class="checkmark"></span>
-            </label>
-        </div> 
-        
 <div class="toggle-check check-lamp">
             <label for="lamp">
                 <input type="checkbox" class="checkbox" id="lamp">2 lamps
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+<div class="toggle-check check-laptop">
+            <label for="laptop">
+                <input type="checkbox" class="checkbox" id="laptop">1 laptop
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+<div class="toggle-check check-DVDplayer">
+            <label for="DVDplayer">
+                <input type="checkbox" class="checkbox" id="DVDplayer">1 DVD player
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+<div class="toggle-check check-speaker">
+            <label for="speaker">
+                <input type="checkbox" class="checkbox" id="speaker">1 speaker
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+<div class="toggle-check check-lead">
+            <label for="lead">
+                <input type="checkbox" class="checkbox" id="lead">1 lead
                 <span class="checkmark"></span>
             </label>
         </div>
@@ -153,6 +162,53 @@
         
         
 <br>
+                    <article id="post" class="toggle-item item-DVDplayer">
+                    <p>
+                    ITEM: DVD player<br>
+                    BRAND: <br>
+                    MODEL: <br>
+                    YEAR OF PRODUCTION: <br>
+                    <br>
+                    PROBLEM: doesn't power on. the device has been kept with Victoria FF for over a week and several fixers have already had ago including a capacitor replacement with a poor soldering job <br>
+                    <br>
+                    REPAIR:<br>
+                      <ol>
+                        <li>dissasembled the DVD player
+                        <li>Karl taught me how to desolder and resolder joints on a PCB
+                        <li>resoldered the poor solering jobs by previous repairers
+                        <li>desoldered the capacitor
+                        <li>checked capacitor resistance and it seemed off, however this was a multimeter fault and it was actually fine once we used a better multimeter
+                        <li>resoldered the capacitor back on
+                        <li>Karl continued to diagnose the issue whilst I ended up working on a different repair
+                      </ol>
+                    <br>
+                    OUTCOME: either needs more time, else sent to e-waste<br>
+                    <br>
+                    <i>- 10/10/2026 @ Victoria Fixing Factory</i>
+                    </article>
+
+                    <article id="post" class="toggle-item item-speaker">
+                    <p>
+                    ITEM: speaker<br>
+                    BRAND: SONY<br>
+                    MODEL: <br>
+                    YEAR OF PRODUCTION: <br>
+                    <br>
+                    PROBLEM: got quieter overtime then stopped working. customer thinks it is due to a loose connection as he did a DIY wire replacement<br>
+                    <br>
+                    REPAIR:<br>
+                      <ol>
+                        <li>PAT visual pass. this repair was supervised by repairer Karl
+                        <li>used multimeter to check continuity, the DIY wire replacement seems functional and not the problem
+                        <li>unsoldered speaker component and checked resistance with multimeter - seemed very off
+                        <li>helped the customer look for a new part online
+                      </ol>
+                    <br>
+                    OUTCOME:helped customer look for a replacement part - needs to be soldered in once received<br>
+                    <br>
+                    <i>- 10/10/2026 @ Victoria Fixing Factory</i>
+                    </article>
+
                     <article id="post" class="toggle-item item-lamp">
                     <p>
                     ITEM: lamp<br>
@@ -546,6 +602,18 @@
 
 .check-laptop:has(input:checked)~.toggle-item {
     &.item-laptop {
+        display:block;
+    }
+}
+
+.check-laptop:has(input:checked)~.toggle-item {
+    &.item-DVDplayer {
+        display:block;
+    }
+}
+
+.check-laptop:has(input:checked)~.toggle-item {
+    &.item-speaker {
         display:block;
     }
 }
