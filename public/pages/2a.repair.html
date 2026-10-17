@@ -52,18 +52,8 @@
                     <li>Jonathan
                     <li>Cameron
                     <li>Karl
+                    <li>Fiona
                   </ul>
-                  
-                  REPAIR ENTRIES STATISTICS:<br>
-                  14 total<br>
-                  <br>
-                  6 successful<br>
-                  6 advice given<br>
-                  2 e-waste<br>
-                  <br>
-                  2 independent<br>
-                  8 supervised<br>
-                  5 shadowing/assissting<br>
                   
   
   <h1>FILTER REPAIR ENTRIES BY:</h1>          
@@ -156,12 +146,93 @@
             </label>
         </div>
 
+CLOTHES
+
+<div class="toggle-check check-trousers">
+            <label for="trousers">
+                <input type="checkbox" class="checkbox" id="trousers">2 trousers
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+<div class="toggle-check check-Tshirt">
+            <label for="Tshirt">
+                <input type="checkbox" class="checkbox" id="Tshirt">1 T-shirt
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
 
         
         
         
         
 <br>
+                    <article id="post" class="toggle-item item-trousers">
+                    <p>
+                    ITEM: tracksuit <br>
+                    BRAND: <br>
+                    <br>
+                    PROBLEM: hole in crotch area <br>
+                    <br>
+                    REPAIR:<br>
+                      <ol>
+                        <li>lead sewist Fiona advised and taught me what to do. the customer wanted to try some of the sewing themselves and i had to teach and supervise
+                        <li>i wound a bobbin on the machine using the thread that matched colours
+                        <li>i thread the sewing machine
+                        <li>i gave arundown of how the machine works to the customer and demod a simple line on a scrap piece
+                        <li>i supervised and taught the customer as he practised a line on the scrap piece
+                        <li>i supervised him do the real line to close the hole in the tracksuit
+                        <li>Fiona had a look and finished it up
+                      </ol>
+                    <br>
+                    OUTCOME: success! <br>
+                    <br>
+                    <i>- 17/10/2026 @ The Wheel Merton in collaboration with Wimbledon Citizens Hub</i>
+                    </article>
+
+                    <article id="post" class="toggle-item item-trousers">
+                    <p>
+                    ITEM: uniform trousers for my mum <br>
+                    BRAND: <br>
+                    <br>
+                    PROBLEM: too long <br>
+                    <br>
+                    REPAIR:<br>
+                      <ol>
+                        <li>lead sewist Fiona advised and taught me what to do
+                        <li>i measured and marked the correct length
+                        <li>i cut the fabric with shears
+                        <li>i spent a lot of time trying to double fold the edges over and keep them there with pins
+                        <li>i sewed 2 lines, hemming each leg of the trousers
+                      </ol>
+                    <br>
+                    OUTCOME: success! <br>
+                    <br>
+                    <i>- 17/10/2026 @ The Wheel Merton in collaboration with Wimbledon Citizens Hub</i>
+                    </article>
+
+                    <article id="post" class="toggle-item item-Tshirt">
+                    <p>
+                    ITEM: uniform T-shirt for my mum <br>
+                    BRAND: <br>
+                    <br>
+                    PROBLEM: too long <br>
+                    <br>
+                    REPAIR:<br>
+                      <ol>
+                        <li>lead sewist Fiona advised and taught me what to do
+                        <li>i measured and marked the correct length
+                        <li>i cut the fabric with shears
+                        <li>i spent a lot of time trying to double fold the edges over and keep them there with pins
+                        <li>i sewed a line, hemming the shirt
+                      </ol>
+                    <br>
+                    OUTCOME: success! <br>
+                    <br>
+                    <i>- 17/10/2026 @ The Wheel Merton in collaboration with Wimbledon Citizens Hub</i>
+                    </article>
+
                     <article id="post" class="toggle-item item-DVDplayer">
                     <p>
                     ITEM: DVD player<br>
@@ -606,14 +677,26 @@
     }
 }
 
-.check-laptop:has(input:checked)~.toggle-item {
+.check-DVDplayer:has(input:checked)~.toggle-item {
     &.item-DVDplayer {
         display:block;
     }
 }
 
-.check-laptop:has(input:checked)~.toggle-item {
+.check-speaker:has(input:checked)~.toggle-item {
     &.item-speaker {
+        display:block;
+    }
+}
+
+.check-Tshirt:has(input:checked)~.toggle-item {
+    &.item-Tshirt {
+        display:block;
+    }
+}
+
+.check-trousers:has(input:checked)~.toggle-item {
+    &.item-trousers {
         display:block;
     }
 }
